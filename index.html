@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>session</title>
+    </head>
+    <body>
+        hello
+        <script>
+            const params = {
+                "method":"POST",
+                "headers" : {
+                    "Content-Type": "application/json"
+                }
+            }
+            fetch("/", params).then(res => res.json()).then(data => {
+                document.body.textContent = data.count
+            });
+        </script>
+    </body>
+</html>
